@@ -2,9 +2,16 @@
 Configurations files, templates and examples.
 
 ## vim config 
+Copy .vimrc
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/.vimrc --output ~/.vimrc
 ```
+
+Copy coc-settings.json
+```bash
+curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.json --output ~/.vim/coc-settings.json
+```
+
 
 - Format with Prettier: ```Ctrl+l```
 - Toggle Undo tree: ```Ctrl+z```
