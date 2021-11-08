@@ -60,6 +60,10 @@ endif
 		nmap <silent> gy <Plug>(coc-type-definition)
 		nmap <silent> gi <Plug>(coc-implementation)
 		nmap <silent> gr <Plug>(coc-references)
+	Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 
 	"Search 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }

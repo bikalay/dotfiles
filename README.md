@@ -16,7 +16,7 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/.vimrc --output
 - Go to implementation ```gi```
 - Go to reference ```gr```
 
-## fzf
+### fzf
 - Find file ```Ctrl+O```
 - Find text ```Ctrl+F```
 
