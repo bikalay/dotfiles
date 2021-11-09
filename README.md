@@ -27,3 +27,8 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 - Find file ```Ctrl+O```
 - Find text ```Ctrl+F```
 
+## editorconfig
+Copy .editorconfig
+```bash
+curl https://raw.githubusercontent.com/bikalay/dotfiles/main/editorconfig/.editorconfig --output .editorconfig
+```
