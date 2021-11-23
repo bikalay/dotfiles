@@ -6,7 +6,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 	call plug#begin('~/.vim/plugged')
 
-
 	"Theme
 	Plug 'gruvbox-community/gruvbox'
 	Plug 'sainnhe/gruvbox-material'
@@ -60,6 +59,7 @@ endif
 		nmap <silent> gy <Plug>(coc-type-definition)
 		nmap <silent> gi <Plug>(coc-implementation)
 		nmap <silent> gr <Plug>(coc-references)
+
 	Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
@@ -79,16 +79,17 @@ endif
 
 	command! ProjectFiles execute 'Files' s:find_git_root()
 
-	noremap <C-O> :ProjectFiles<CR>
+	noremap <C-S> :ProjectFiles<CR>
 	noremap <C-F> :Rg<CR>
-
+	
+	"Float Terminal
+	Plug 'voldikss/vim-floaterm'
+	command FT FloatermNew
 
 call plug#end()
 
 colorscheme gruvbox-material
 set background=dark
-
-
 
 "Base settings
 syntax on
@@ -102,11 +103,22 @@ set nowritebackup
 set updatetime=300
 set spell
 
+"Netrw
+let g:netrw_banner    = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 25
+let g:netrw_preview   = 1
+let g:netrw_altv      = 1
+
+"Highlight Match patterns
+highlight MatchParen ctermbg=blue guibg=lightblue
+
 "Spells
 hi clear SpellBad
 let &t_Cs = "\e[4:3m"
 let &t_Ce = "\e[4:0m"
 hi SpellBad gui=undercurl guisp=red term=undercurl cterm=undercurl
 
-
+"diff
+command Diff w !git diff % -
 
