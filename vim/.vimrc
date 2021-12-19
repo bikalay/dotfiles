@@ -79,7 +79,7 @@ endif
 
 	command! ProjectFiles execute 'Files' s:find_git_root()
 
-	noremap <C-S> :ProjectFiles<CR>
+	noremap <C-P> :ProjectFiles<CR>
 	noremap <C-F> :Rg<CR>
 	
 	"Float Terminal
