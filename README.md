@@ -30,7 +30,7 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 
 ### fzf
 
-- Find file `Ctrl+O`
+- Find file `Ctrl+P`
 - Find text `Ctrl+F`
 
 ## editorconfig
@@ -45,4 +45,10 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/editorconfig/.edito
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettierrc --output .prettierrc
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettierignore --output .prettierignore
+```
+
+## typescript config for js
+
+```bash
+curl https://raw.githubusercontent.com/bikalay/dotfiles/main/typescript/jsconfig.json --output jsconfig.json
 ```
