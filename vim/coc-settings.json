@@ -1,14 +1,25 @@
 {
-  "languageserver": {
-      "golang": {
-        "command": "gopls",
-        "rootPatterns": ["go.mod"],
-        "filetypes": ["go"]
-      }
-  },
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"filetypes": ["go"]
+		},
 
-  "yaml.schemas": {
-      "kubernetes": "/*.yaml"
-  }
+		"graphql": {
+			"command": "graphql-lsp",
+			"args": ["server", "-m", "stream"],
+			// customize filetypes to your needs
+			"filetypes": [
+				"javascript",
+				"typescript",
+				"typescriptreact",
+				"graphql"
+			]
+		}
+	},
 
+	"yaml.schemas": {
+		"kubernetes": "/*.yaml"
+	}
 }

@@ -64,6 +64,7 @@ endif
 	Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Search 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
@@ -85,6 +86,12 @@ endif
 	"Float Terminal
 	Plug 'voldikss/vim-floaterm'
 	command FT FloatermNew
+	
+	"Syntax highlight
+	Plug 'sheerun/vim-polyglot'
+
+	"Colors highlight
+	Plug 'ap/vim-css-color'
 
 call plug#end()
 
@@ -102,6 +109,11 @@ set noerrorbells
 set nowritebackup
 set updatetime=300
 set spell
+
+"Folding
+set foldmethod=syntax
+set nofoldenable
+set foldlevel=99
 
 "Netrw
 let g:netrw_banner    = 0
@@ -122,3 +134,13 @@ hi SpellBad gui=undercurl guisp=red term=undercurl cterm=undercurl
 "diff
 command Diff w !git diff % -
 
+"ctags
+command MakeTags execute 
+		\'silent !(/usr/local/Cellar/ctags/5.8_2/bin/ctags -f '
+		\.s:find_git_root().'/.tags -R '
+		\.s:find_git_root().'/* && /usr/local/Cellar/ctags/5.8_2/bin/ctags -f '
+		\.s:find_git_root().'/.tags -Ra '
+		\.s:find_git_root().'/node_modules/bootstrap/*)>/dev/null &' | redraw!
+
+set tags+=.tags;$HOME
+set iskeyword+=-
