@@ -64,6 +64,7 @@ endif
 	Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'neoclide/coc-jest', {'do': 'yarn install --frozen-lockfile'}
 	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Search 
@@ -75,25 +76,28 @@ endif
 	endif
 
 	function! s:find_git_root()
-  		return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+  		 return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 	endfunction
 
 	command! ProjectFiles execute 'Files' s:find_git_root()
 
 	noremap <C-P> :ProjectFiles<CR>
-	noremap <C-F> :Rg<CR>
-	
-	"Float Terminal
-	Plug 'voldikss/vim-floaterm'
-	command FT FloatermNew
-	
+	noremap <C-p> :GFiles<CR>
+	noremap <C-f> :Rg<CR>>
+
 	"Syntax highlight
 	Plug 'sheerun/vim-polyglot'
 
 	"Colors highlight
 	Plug 'ap/vim-css-color'
 
-call plug#end()
+	"JSDocs
+	Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+	\}
+
+	call plug#end()
 
 colorscheme gruvbox-material
 set background=dark
@@ -109,16 +113,23 @@ set noerrorbells
 set nowritebackup
 set updatetime=300
 set spell
+set splitbelow
 
 "Folding
 set foldmethod=syntax
 set nofoldenable
 set foldlevel=99
 
+"Yaml
+augroup filetype_yaml
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.{yaml,yml},.kube/config set filetype=yaml foldmethod=indent
+augroup END
+
 "Netrw
 let g:netrw_banner    = 0
 let g:netrw_liststyle = 3
-let g:netrw_winsize   = 25
+let g:netrw_winsize   = 50
 let g:netrw_preview   = 1
 let g:netrw_altv      = 1
 
@@ -144,3 +155,5 @@ command MakeTags execute
 
 set tags+=.tags;$HOME
 set iskeyword+=-
+
+au BufNewFile,BufRead,BufReadPost .kube/config set syntax=YAML
