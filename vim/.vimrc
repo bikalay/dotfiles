@@ -76,6 +76,7 @@ endif
 	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-jest', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Search 
