@@ -4,6 +4,7 @@ Configurations files, templates and examples.
 
 <details>
 <summary>vim config</summary>
+
 Copy .vimrc
 
 ```bash
@@ -36,6 +37,7 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 <summary>
 neovim config
 </summary>
+
 Copy init.vim 
 
 ```bash
@@ -69,7 +71,9 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 <summary>
 editorconfig
 </summary>
+
 Copy .editorconfig
+
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/editorconfig/.editorconfig --output .editorconfig
 ```
@@ -79,6 +83,9 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/editorconfig/.edito
 <summary>
 prettier
 </summary>
+
+Copy .prettierrc
+
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettierrc --output .prettierrc
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettierignore --output .prettierignore
@@ -89,6 +96,9 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettieri
 <summary>
 typescript config for js
 </summary>
+
+Copy tsconfig.json
+
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/typescript/jsconfig.json --output jsconfig.json
 ```
@@ -98,7 +108,9 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/typescript/jsconfig
 <summary>
 Tmux config
 </summary>
+
 Copy .tmux.conf
+
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/tmux/.tmux.conf --output ~/.tmux.conf
 ```
