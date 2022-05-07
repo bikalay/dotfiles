@@ -69,6 +69,7 @@ call plug#begin()
 	Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-jest', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Syntax highlight
