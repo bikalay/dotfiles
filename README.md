@@ -3,7 +3,7 @@
 Configurations files, templates and examples.
 
 <details>
-  <summary>## vim config</summary>
+<summary>vim config</summary>
 Copy .vimrc
 
 ```bash
@@ -31,9 +31,10 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 - Find file `Ctrl+P`
 - Find text `Ctrl+F`
 </details>
+
 <details>
 <summary>
-## neovim config
+neovim config
 </summary>
 Copy init.vim 
 
@@ -63,9 +64,10 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/vim/coc-settings.js
 - Find text `Ctrl+F`
 
 </details>
+
 <details>
 <summary>
-## editorconfig
+editorconfig
 </summary>
 Copy .editorconfig
 ```bash
@@ -75,7 +77,7 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/editorconfig/.edito
 
 <details>
 <summary>
-## prettier
+prettier
 </summary>
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettierrc --output .prettierrc
@@ -85,10 +87,20 @@ curl https://raw.githubusercontent.com/bikalay/dotfiles/main/prettier/.prettieri
 
 <details>
 <summary>
-## typescript config for js
+typescript config for js
 </summary>
 ```bash
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/typescript/jsconfig.json --output jsconfig.json
+```
+</details>
+
+<details>
+<summary>
+Tmux config
+</summary>
+Copy .tmux.conf
+```bash
+curl https://raw.githubusercontent.com/bikalay/dotfiles/main/tmux/.tmux.conf --output ~/.tmux.conf
 ```
 </details>
 
