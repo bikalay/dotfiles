@@ -1,0 +1,29 @@
+[user]
+	name = Alexandr
+	email = a.vovchuk@gmail.com
+[core]
+	autocrlf = input
+	editor = nvim
+[credential]
+	helper = osxkeychain
+[diff "sopsdiffer"]
+	textconv = sops -d
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	keepBackup = false
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'	
+[alias]
+	tree = log --all --decorate --oneline --graph
+	cm = commit -a -m 
+	cmu = commit --amend
+	ch = checkout 
+	chb = checkout -b
+	
