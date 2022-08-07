@@ -70,6 +70,8 @@ call plug#begin()
 	Plug 'neoclide/coc-jest', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'coc-extensions/coc-svelte', {'do': 'yarn install --frozen-lockfile'}
 	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Syntax highlight
@@ -90,9 +92,13 @@ call plug#begin()
 	nnoremap <C-p> <cmd>Telescope find_files<cr>
 	nnoremap <C-f> <cmd>Telescope live_grep<cr>
 
-call plug#end()
 
+	Plug 'leafOfTree/vim-svelte-plugin'
+
+call plug#end()
+:set relativenumber
 :set number
+:set number relativenumber
 :set nowrap
 :set noswapfile
 :set smartcase
