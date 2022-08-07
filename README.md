@@ -115,4 +115,11 @@ Copy .tmux.conf
 curl https://raw.githubusercontent.com/bikalay/dotfiles/main/tmux/.tmux.conf --output ~/.tmux.conf
 ```
 </details>
-
+<details>
+<summary>
+Git config
+</summary>
+```bash
+curl https://raw.githubusercontent.com/bikalay/dotfiles/main/git/.gitconfig --output ~/.gitconfig
+```
+</details>
