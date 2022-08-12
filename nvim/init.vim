@@ -63,6 +63,8 @@ call plug#begin()
 		nmap <silent> gi <Plug>(coc-implementation)
 		nmap <silent> gr <Plug>(coc-references)
 
+		inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
 	Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
