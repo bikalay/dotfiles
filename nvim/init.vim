@@ -14,11 +14,8 @@ call plug#begin()
 	Plug 'editorconfig/editorconfig-vim'
 
 	"Prettier
-	Plug 'prettier/vim-prettier', {
-  	\ 'do': 'yarn install',
-	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] 
-  	\ }
-	nmap <C-l> :Prettier<CR>
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+	nnoremap <C-l> :Prettier<cr>
 
 	"Undo tree
 		Plug 'mbbill/undotree'
@@ -40,9 +37,6 @@ call plug#begin()
 
 	"Comments
 	Plug 'tpope/vim-commentary'
-	nmap <C-_> gcc
-	nmap <C-?> gcap
-	vmap <C-_> gc
 
 	"Surround
 	Plug 'tpope/vim-surround'
@@ -75,6 +69,7 @@ call plug#begin()
 	Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'coc-extensions/coc-svelte', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'ruanyl/coc-coverage', {'do': 'yarn install --frozen-lockfile'}
+	Plug 'klaaspieter/coc-sourcekit', {'do': 'yarn install --frozen-lockfile'}
 	autocmd FileType scss setl iskeyword+=@-@ 
 
 	"Syntax highlight
@@ -94,7 +89,6 @@ call plug#begin()
 	Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 	nnoremap <C-p> <cmd>Telescope find_files<cr>
 	nnoremap <C-f> <cmd>Telescope live_grep<cr>
-
 
 	Plug 'leafOfTree/vim-svelte-plugin'
 
