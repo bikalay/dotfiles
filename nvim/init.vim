@@ -84,15 +84,18 @@ call plug#begin()
   \ 'do': 'make install'
 	\}
 
+	"Telescope
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'	
 	Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 	nnoremap <C-p> <cmd>Telescope find_files<cr>
 	nnoremap <C-f> <cmd>Telescope live_grep<cr>
 
+	"Svelte
 	Plug 'leafOfTree/vim-svelte-plugin'
 
 call plug#end()
+
 :set relativenumber
 :set number
 :set number relativenumber
